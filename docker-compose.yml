@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: social-network-postgres
+    environment:
+      POSTGRES_DB: social_network
+      POSTGRES_USER: social_user
+      POSTGRES_PASSWORD: local_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+  adminer:
+    image: adminer:5
+    container_name: social-network-adminer
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
+  
+  
+  

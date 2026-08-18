@@ -1,0 +1,10 @@
+{
+  "name": "social-network-mvp",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names frontend,backend --prefix-colors cyan,green \"npm --prefix frontend run dev\" \"npm --prefix backend run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
